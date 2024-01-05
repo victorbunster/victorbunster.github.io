@@ -1,8 +1,29 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Draft.js Example</title>
+  <!-- Include React and ReactDOM -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+  <!-- Include Draft.js -->
+  <script src="https://unpkg.com/draft-js@0.11.7/dist/Draft.js"></script>
+</head>
 <body>
-<h1>Notes</h1>
-<p>I'm hosted with GitHub Pages.</p>
-<p><a href="index.html">home</a></p>
+  <div id="editor"></div>
+
+  <script>
+    // Get necessary Draft.js components
+    const { Editor, EditorState } = Draft;
+
+    // Create initial EditorState
+    const initialEditorState = EditorState.createEmpty();
+
+    // Render Draft.js Editor
+    ReactDOM.render(
+      <Editor editorState={initialEditorState} />,
+      document.getElementById('editor')
+    );
+  </script>
 </body>
 </html>
