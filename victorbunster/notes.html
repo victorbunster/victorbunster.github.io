@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
+<head>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+</head>
 <body>
 <h1>notes</h1>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+
+<textarea id="markdown-textarea"></textarea>
+
 <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
 <script>
-var simplemde = new SimpleMDE();
+  var simplemde = new SimpleMDE({
+    element: document.getElementById("markdown-textarea"),
+    spellChecker: false // Optional - disable spell checker
+  });
 </script>
+
 <h1><a href="index.html">home</a></h1>
 </body>
 </html>
