@@ -1,3 +1,0 @@
-# notes
-
-# [home](index.html)
